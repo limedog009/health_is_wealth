@@ -39,12 +39,34 @@ body {
     display: block;
 }
 
+.quick-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px; /* Space between links */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow */
+}
+
 .quick-links a {
     text-decoration: none;
     color: white;
     margin: 0;
     padding: 8px 16px;
     font-size: 1rem; /* Responsive font size */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis if text overflows */
+}
+
+@media (max-width: 600px) {
+    .quick-links a {
+        font-size: 0.9rem; /* Reduce font size */
+        padding: 4px 8px; /* Reduce padding */
+    }
+
+    .quick-links {
+        gap: 8px; /* Reduce gap between links */
+    }
 }
 
 /* Top section */
